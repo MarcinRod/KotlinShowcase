@@ -1,0 +1,67 @@
+<resources>
+    <string name="app_name">KotlinShowcase</string>
+
+    <!-- GalleryScreen -->
+    <string name="gallery_title">Kotlin Showcase</string>
+
+    <!-- DetailScreen -->
+    <string name="detail_title_fallback">Detail</string>
+    <string name="detail_back_content_description">Back</string>
+    <string name="detail_section_description">Description</string>
+    <string name="detail_section_code">Example Code</string>
+    <string name="detail_section_demo">Interactive Demo</string>
+    <string name="detail_button_run_demo">Run Demo</string>
+    <string name="detail_output_label">Output:</string>
+    <string name="detail_concept_not_found">Concept not found</string>
+
+    <!-- Concept titles -->
+    <string name="concept_variables_title">Variables</string>
+    <string name="concept_data_types_title">Basic Data Types</string>
+    <string name="concept_conditionals_title">Conditionals</string>
+    <string name="concept_strings_title">Strings</string>
+    <string name="concept_loops_title">Loops</string>
+    <string name="concept_ranges_title">Ranges</string>
+    <string name="concept_functions_title">Functions</string>
+    <string name="concept_lambdas_title">Lambda Functions</string>
+    <string name="concept_collections_title">Collections</string>
+    <string name="concept_null_safety_title">Null Safety</string>
+    <string name="concept_classes_title">Classes</string>
+    <string name="concept_inheritance_title">Inheritance</string>
+    <string name="concept_special_classes_title">Special Classes</string>
+    <string name="concept_extensions_title">Extension Functions &amp; Properties</string>
+    <string name="concept_naming_conventions_title">Naming Conventions</string>
+
+    <!-- Concept descriptions -->
+    <string name="concept_variables_description">Kotlin uses \'val\' for read-only variables and \'var\' for mutable variables. The type is usually inferred automatically, but can be declared explicitly. Prefer \'val\' over \'var\' whenever the value doesn\'t need to change — it makes code safer and more readable.</string>
+    <string name="concept_data_types_description">Kotlin has 8 basic types: Int, Long, Double, Float, Boolean, String, and Char. Types are usually inferred but can be declared explicitly. Collections such as List, MutableList, Set, and Map are also fundamental types.</string>
+    <string name="concept_conditionals_description">In Kotlin, \'if\' is an expression — it returns a value, so there is no ternary operator (a ? b : c). \'when\' is a powerful replacement for the switch statement and also works as an expression.</string>
+    <string name="concept_strings_description">Kotlin strings support templates ($ and ${}), multi-line raw strings, and a rich set of built-in operations for searching, transforming, and comparing text.</string>
+    <string name="concept_loops_description">Kotlin supports \'for\', \'while\', and \'do-while\' loops. The \'for\' loop works with ranges and collections. Ranges support \'downTo\', \'until\', and \'step\' to control iteration direction and increment.</string>
+    <string name="concept_ranges_description">Ranges represent a sequence of values created with \'..\'. Use \'downTo\', \'until\', and \'step\' to control direction and increment. Ranges work in loops and in \'in\' checks inside conditions.</string>
+    <string name="concept_functions_description">Functions in Kotlin are declared with \'fun\'. They support default arguments (reducing overloads), named arguments (improving readability), and vararg (variable number of arguments). Single-expression functions can be written with \'=\' syntax.</string>
+    <string name="concept_lambdas_description">Lambda functions are anonymous functions that can be assigned to variables or passed as arguments. Syntax: { params -&gt; body }. When there is a single parameter, it can be referenced as \'it\'.</string>
+    <string name="concept_collections_description">Kotlin collections include immutable and mutable List, Set, and Map. Sets automatically remove duplicates. Maps store key-value pairs. Higher-order functions like filter, map, sum, and forEach make processing easy.</string>
+    <string name="concept_null_safety_description">Kotlin\'s type system eliminates null-reference errors at compile time. Non-nullable types cannot hold null. Add \'?\' to a type to make it nullable. Safe call \'?.\', Elvis \'?:\', not-null assertion \'!!\', safe cast \'as?\', and helpers like toIntOrNull() keep code safe.</string>
+    <string name="concept_classes_description">Classes in Kotlin are final by default. The primary constructor is declared in the class header. A secondary constructor must delegate to the primary one. The \'init\' block runs initialization logic right after the primary constructor.</string>
+    <string name="concept_inheritance_description">Classes are final by default — use \'open\' to allow inheritance. Override methods with \'override\'. Interfaces define contracts and can provide default method implementations. A class can implement multiple interfaces.</string>
+    <string name="concept_special_classes_description">Kotlin offers purpose-built class types: \'data class\' auto-generates equals/hashCode/toString/copy; \'enum class\' defines a fixed set of constants (with optional properties); \'object\' creates a singleton; \'companion object\' provides static-like members inside a class.</string>
+    <string name="concept_extensions_description">Extension functions and properties let you add new functionality to existing classes — even ones you don\'t own — without inheritance. Extension properties provide computed pseudo-properties; they cannot store state, only expose a getter.</string>
+    <string name="concept_naming_conventions_description">Kotlin follows clear naming rules: variables and functions use camelCase, classes use PascalCase. Boolean functions start with \'is\', \'has\', or \'can\'. Function names should be verbs describing what they do. Good naming makes code self-documenting.</string>
+
+    <!-- Concept card short descriptions (GalleryScreen) -->
+    <string name="concept_variables_card_desc">val vs var, type inference, best practices.</string>
+    <string name="concept_data_types_card_desc">Int, Long, Double, Float, Boolean, String, Char.</string>
+    <string name="concept_conditionals_card_desc">if as expression, when — no ternary needed.</string>
+    <string name="concept_strings_card_desc">Templates, multi-line, and string operations.</string>
+    <string name="concept_loops_card_desc">for with downTo/until/step, while.</string>
+    <string name="concept_ranges_card_desc">1..10, downTo, until, step, in checks.</string>
+    <string name="concept_functions_card_desc">Default args, named args, vararg, single-expression.</string>
+    <string name="concept_lambdas_card_desc">{ params -&gt; body }, it, lambdas as arguments.</string>
+    <string name="concept_collections_card_desc">List, Set, Map — filter, map, sum, forEach.</string>
+    <string name="concept_null_safety_card_desc">\?., \?:, !!, as\?, toIntOrNull().</string>
+    <string name="concept_classes_card_desc">Primary/secondary constructor, init block.</string>
+    <string name="concept_inheritance_card_desc">open, override, interface, default methods.</string>
+    <string name="concept_special_classes_card_desc">data class, enum, object, companion object.</string>
+    <string name="concept_extensions_card_desc">Extend any type, extension properties.</string>
+    <string name="concept_naming_conventions_card_desc">camelCase, PascalCase, is/has/can prefixes.</string>
+</resources>

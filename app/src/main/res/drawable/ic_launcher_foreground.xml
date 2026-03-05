@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+    <!-- Kotlin-inspired shape centered in the 66x66 safe zone (21,21 to 87,87) -->
+    <!-- The shape is a stylized 'K' representation using Material Design 3 vibes -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M25,25 L54,25 L25,54 Z" />
+    <path
+        android:fillAlpha="0.8"
+        android:fillColor="#FFFFFF"
+        android:pathData="M25,54 L54,25 L83,25 L54,54 Z" />
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M25,83 L54,54 L83,83 Z" />
+</vector>

@@ -1,0 +1,68 @@
+<resources>
+    <string name="app_name">KotlinShowcase</string>
+
+    <!-- GalleryScreen -->
+    <string name="gallery_title">Kotlin Showcase</string>
+
+    <!-- DetailScreen -->
+    <string name="detail_title_fallback">Szczegóły</string>
+    <string name="detail_back_content_description">Wstecz</string>
+    <string name="detail_section_description">Opis</string>
+    <string name="detail_section_code">Przykładowy kod</string>
+    <string name="detail_section_demo">Interaktywne demo</string>
+    <string name="detail_button_run_demo">Uruchom demo</string>
+    <string name="detail_output_label">Wynik:</string>
+    <string name="detail_concept_not_found">Nie znaleziono tematu</string>
+
+    <!-- Concept titles -->
+    <string name="concept_variables_title">Zmienne</string>
+    <string name="concept_data_types_title">Podstawowe typy danych</string>
+    <string name="concept_conditionals_title">Wyrażenia warunkowe</string>
+    <string name="concept_strings_title">Łańcuchy znaków</string>
+    <string name="concept_loops_title">Pętle</string>
+    <string name="concept_ranges_title">Zakresy</string>
+    <string name="concept_functions_title">Funkcje</string>
+    <string name="concept_lambdas_title">Funkcje lambda</string>
+    <string name="concept_collections_title">Kolekcje</string>
+    <string name="concept_null_safety_title">Bezpieczeństwo null</string>
+    <string name="concept_classes_title">Klasy</string>
+    <string name="concept_inheritance_title">Dziedziczenie</string>
+    <string name="concept_special_classes_title">Klasy specjalne</string>
+    <string name="concept_extensions_title">Funkcje i właściwości rozszerzające</string>
+    <string name="concept_naming_conventions_title">Konwencje nazewnictwa</string>
+
+    <!-- Concept descriptions -->
+    <string name="concept_variables_description">Kotlin używa \'val\' dla zmiennych tylko do odczytu i \'var\' dla zmiennych mutowalnych. Typ jest zazwyczaj wnioskowany automatycznie, ale można go podać jawnie. Preferuj \'val\' zamiast \'var\' zawsze, gdy wartość nie musi się zmieniać — kod jest wtedy bezpieczniejszy i bardziej czytelny.</string>
+    <string name="concept_data_types_description">Kotlin ma 8 podstawowych typów: Int, Long, Double, Float, Boolean, String i Char. Typy są zazwyczaj wnioskowane, ale można je podać jawnie. Kolekcje takie jak List, MutableList, Set i Map są również podstawowymi typami.</string>
+    <string name="concept_conditionals_description">W Kotlinie \'if\' jest wyrażeniem — zwraca wartość, dlatego nie ma operatora trójkowego (a ? b : c). \'when\' to rozbudowana wersja switch, która również działa jako wyrażenie.</string>
+    <string name="concept_strings_description">Łańcuchy znaków w Kotlinie obsługują szablony ($ i ${}), wieloliniowe surowe ciągi oraz bogaty zestaw wbudowanych operacji do przeszukiwania, transformowania i porównywania tekstu.</string>
+    <string name="concept_loops_description">Kotlin obsługuje pętle \'for\', \'while\' i \'do-while\'. Pętla \'for\' działa z zakresami i kolekcjami. Zakresy obsługują \'downTo\', \'until\' i \'step\' do sterowania kierunkiem i krokiem iteracji.</string>
+    <string name="concept_ranges_description">Zakresy reprezentują sekwencję wartości tworzoną operatorem \'..\'. Użyj \'downTo\', \'until\' i \'step\', aby sterować kierunkiem i krokiem. Zakresy działają w pętlach oraz w sprawdzeniach \'in\' wewnątrz warunków.</string>
+    <string name="concept_functions_description">Funkcje w Kotlinie deklaruje się za pomocą \'fun\'. Obsługują argumenty domyślne (redukujące przeciążenia), argumenty nazwane (poprawiające czytelność) oraz vararg (zmienna liczba argumentów). Funkcje jednowyrazowe można zapisać składnią \'=\'.</string>
+    <string name="concept_lambdas_description">Funkcje lambda to anonimowe funkcje, które można przypisać do zmiennej lub przekazać jako argument. Składnia: { parametry -&gt; ciało }. Gdy jest jeden parametr, można odwołać się do niego jako \'it\'.</string>
+    <string name="concept_collections_description">Kolekcje Kotlina obejmują niemutowalne i mutowalne List, Set oraz Map. Set automatycznie usuwa duplikaty. Map przechowuje pary klucz-wartość. Funkcje wyższego rzędu jak filter, map, sum i forEach ułatwiają przetwarzanie.</string>
+    <string name="concept_null_safety_description">System typów Kotlina eliminuje błędy referencji null w czasie kompilacji. Typy nienullowalne nie mogą przechowywać null. Dodaj \'?\' do typu, aby był nullowalny. Bezpieczne wywołanie \'?.\', Elvis \'?:\', asercja \'!!\', bezpieczne rzutowanie \'as?\' i pomocniki jak toIntOrNull() zapewniają bezpieczeństwo kodu.</string>
+    <string name="concept_classes_description">Klasy w Kotlinie są domyślnie finalne. Konstruktor główny deklaruje się w nagłówku klasy. Konstruktor dodatkowy musi delegować do głównego. Blok \'init\' wykonuje logikę inicjalizacji tuż po wywołaniu konstruktora głównego.</string>
+    <string name="concept_inheritance_description">Klasy są domyślnie finalne — użyj \'open\', aby umożliwić dziedziczenie. Nadpisuj metody za pomocą \'override\'. Interfejsy definiują kontrakty i mogą zawierać domyślne implementacje metod. Klasa może implementować wiele interfejsów.</string>
+    <string name="concept_special_classes_description">Kotlin oferuje dedykowane typy klas: \'data class\' automatycznie generuje equals/hashCode/toString/copy; \'enum class\' definiuje stały zbiór stałych (z opcjonalnymi właściwościami); \'object\' tworzy singleton; \'companion object\' zapewnia statyczne elementy wewnątrz klasy.</string>
+    <string name="concept_extensions_description">Funkcje i właściwości rozszerzające pozwalają dodać nową funkcjonalność do istniejących klas — nawet tych, których nie możesz modyfikować — bez dziedziczenia. Właściwości rozszerzające dostarczają obliczane pseudo-właściwości; nie mogą przechowywać stanu, tylko udostępniają getter.</string>
+    <string name="concept_naming_conventions_description">Kotlin stosuje jasne zasady nazewnictwa: zmienne i funkcje używają camelCase, klasy używają PascalCase. Funkcje zwracające wartość logiczną zaczynają się od \'is\', \'has\' lub \'can\'. Nazwy funkcji powinny być czasownikami opisującymi ich działanie. Dobre nazewnictwo sprawia, że kod sam się dokumentuje.</string>
+
+    <!-- Concept card short descriptions (GalleryScreen) -->
+    <string name="concept_variables_card_desc">val vs var, wnioskowanie typów, dobre praktyki.</string>
+    <string name="concept_data_types_card_desc">Int, Long, Double, Float, Boolean, String, Char.</string>
+    <string name="concept_conditionals_card_desc">if jako wyrażenie, when — brak operatora trójkowego.</string>
+    <string name="concept_strings_card_desc">Szablony, łańcuchy wieloliniowe i operacje na stringach.</string>
+    <string name="concept_loops_card_desc">for z downTo/until/step, while.</string>
+    <string name="concept_ranges_card_desc">1..10, downTo, until, step, sprawdzenia in.</string>
+    <string name="concept_functions_card_desc">Argumenty domyślne, nazwane, vararg, jednowyrazowe.</string>
+    <string name="concept_lambdas_card_desc">{ parametry -&gt; ciało }, it, lambdy jako argumenty.</string>
+    <string name="concept_collections_card_desc">List, Set, Map — filter, map, sum, forEach.</string>
+    <string name="concept_null_safety_card_desc">\?., \?:, !!, as\?, toIntOrNull().</string>
+    <string name="concept_classes_card_desc">Konstruktor główny/dodatkowy, blok init.</string>
+    <string name="concept_inheritance_card_desc">open, override, interfejs, domyślne metody.</string>
+    <string name="concept_special_classes_card_desc">data class, enum, object, companion object.</string>
+    <string name="concept_extensions_card_desc">Rozszerzanie dowolnego typu, właściwości rozszerzające.</string>
+    <string name="concept_naming_conventions_card_desc">camelCase, PascalCase, przedrostki is/has/can.</string>
+</resources>
+
