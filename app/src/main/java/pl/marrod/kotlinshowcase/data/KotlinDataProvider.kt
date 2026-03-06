@@ -122,48 +122,7 @@ object KotlinDataProvider {
             },
             icon = Icons.Rounded.DataObject
         ),
-
-        // 3. Conditionals
-        KotlinConceptDetail(
-            id = "conditionals",
-            titleRes = R.string.concept_conditionals_title,
-            descriptionRes = R.string.concept_conditionals_description,
-            cardDescriptionRes = R.string.concept_conditionals_card_desc,
-            codeSnippet = """
-                val x = 10
-                
-                // if as an expression 
-                // (no ternary needed)
-                val label = if (x > 5) "large" else "small"
-                
-                // when expression
-                val result = when (x) {
-                    1    -> "one"
-                    in 2..10 -> "between 2 and 10"
-                    else -> "other"
-                }
-                
-                println(label)  // large
-                println(result) // between 2 and 10
-            """.trimIndent(),
-            demoLogic = {
-                val x = 10
-                val label = if (x > 5) "large" else "small"
-                val result = when (x) {
-                    1        -> "one"
-                    in 2..10 -> "between 2 and 10"
-                    else     -> "other"
-                }
-                buildString {
-                    appendLine("x = $x")
-                    appendLine("if (x > 5) → \"$label\"")
-                    appendLine("when ($x)  → \"$result\"")
-                }
-            },
-            icon = Icons.AutoMirrored.Rounded.AltRoute
-        ),
-
-        // 4. Strings
+        // 3. Strings
         KotlinConceptDetail(
             id = "strings",
             titleRes = R.string.concept_strings_title,
@@ -215,8 +174,92 @@ object KotlinDataProvider {
             },
             icon = Icons.Rounded.TextFields
         ),
+        // 4. Ranges
+        KotlinConceptDetail(
+            id = "ranges",
+            titleRes = R.string.concept_ranges_title,
+            descriptionRes = R.string.concept_ranges_description,
+            cardDescriptionRes = R.string.concept_ranges_card_desc,
+            codeSnippet = """
+                val range     = 1..10           // 1 to 10 inclusive
+                val untilEnd  = 1 until 10      // 1 to 9
+                val backwards = 10 downTo 1     // 10, 9 … 1
+                val stepped   = 1..10 step 3    // 1, 4, 7, 10
+                
+                // Membership check
+                if (5 in range) println("5 is in 1..10")
+                
+                // Range in a condition
+                val age = 18
+                if (age in 13..19) println("Teenager")
+                
+                // Iterate
+                for (i in 1..3) println(i)      // 1 2 3
+            """.trimIndent(),
+            demoLogic = {
+                buildString {
+                    append("1..10:         ")
+                    for (i in 1..10) append("$i ")
+                    appendLine()
+                    append("1 until 10:    ")
+                    for (i in 1 until 10) append("$i ")
+                    appendLine()
+                    append("10 downTo 1:   ")
+                    for (i in 10 downTo 1) append("$i ")
+                    appendLine()
+                    append("1..10 step 3:  ")
+                    for (i in 1..10 step 3) append("$i ")
+                    appendLine()
+                    appendLine("5 in 1..10 → ${5 in 1..10}")
+                    val age = 18
+                    appendLine("age=$age in 13..19 → ${age in 13..19} (Teenager)")
+                }
+            },
+            icon = Icons.Rounded.LinearScale
+        ),
+        // 5. Conditionals
+        KotlinConceptDetail(
+            id = "conditionals",
+            titleRes = R.string.concept_conditionals_title,
+            descriptionRes = R.string.concept_conditionals_description,
+            cardDescriptionRes = R.string.concept_conditionals_card_desc,
+            codeSnippet = """
+                val x = 10
+                
+                // if as an expression 
+                // (no ternary needed)
+                val label = if (x > 5) "large" else "small"
+                
+                // when expression
+                val result = when (x) {
+                    1    -> "one"
+                    in 2..10 -> "between 2 and 10"
+                    else -> "other"
+                }
+                
+                println(label)  // large
+                println(result) // between 2 and 10
+            """.trimIndent(),
+            demoLogic = {
+                val x = 10
+                val label = if (x > 5) "large" else "small"
+                val result = when (x) {
+                    1        -> "one"
+                    in 2..10 -> "between 2 and 10"
+                    else     -> "other"
+                }
+                buildString {
+                    appendLine("x = $x")
+                    appendLine("if (x > 5) → \"$label\"")
+                    appendLine("when ($x)  → \"$result\"")
+                }
+            },
+            icon = Icons.AutoMirrored.Rounded.AltRoute
+        ),
 
-        // 5. Loops
+
+
+        // 6. Loops
         KotlinConceptDetail(
             id = "loops",
             titleRes = R.string.concept_loops_title,
@@ -268,49 +311,7 @@ object KotlinDataProvider {
             icon = Icons.Rounded.Repeat
         ),
 
-        // 6. Ranges
-        KotlinConceptDetail(
-            id = "ranges",
-            titleRes = R.string.concept_ranges_title,
-            descriptionRes = R.string.concept_ranges_description,
-            cardDescriptionRes = R.string.concept_ranges_card_desc,
-            codeSnippet = """
-                val range     = 1..10           // 1 to 10 inclusive
-                val untilEnd  = 1 until 10      // 1 to 9
-                val backwards = 10 downTo 1     // 10, 9 … 1
-                val stepped   = 1..10 step 3    // 1, 4, 7, 10
-                
-                // Membership check
-                if (5 in range) println("5 is in 1..10")
-                
-                // Range in a condition
-                val age = 18
-                if (age in 13..19) println("Teenager")
-                
-                // Iterate
-                for (i in 1..3) println(i)      // 1 2 3
-            """.trimIndent(),
-            demoLogic = {
-                buildString {
-                    append("1..10:         ")
-                    for (i in 1..10) append("$i ")
-                    appendLine()
-                    append("1 until 10:    ")
-                    for (i in 1 until 10) append("$i ")
-                    appendLine()
-                    append("10 downTo 1:   ")
-                    for (i in 10 downTo 1) append("$i ")
-                    appendLine()
-                    append("1..10 step 3:  ")
-                    for (i in 1..10 step 3) append("$i ")
-                    appendLine()
-                    appendLine("5 in 1..10 → ${5 in 1..10}")
-                    val age = 18
-                    appendLine("age=$age in 13..19 → ${age in 13..19} (Teenager)")
-                }
-            },
-            icon = Icons.Rounded.LinearScale
-        ),
+
 
         // 7. Functions
         KotlinConceptDetail(
